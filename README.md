@@ -7,3 +7,5 @@ Reference: https://docs.python.org/3/library/secrets.html
 The password must contain the character ";" because in case of a breach and the password is entered into a csv by the attacker, this character may be interpreted to determine a new box.
 
 Another security point is that the password is never displayed on the screen, instead is copied directly to the clipboard.
+
+Exe created with: auto-py-to-exe - https://pypi.org/project/auto-py-to-exe/
