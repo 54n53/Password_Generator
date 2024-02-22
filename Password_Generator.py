@@ -2,7 +2,7 @@ import secrets # https://docs.python.org/3/library/secrets.htmls
 import pyperclip
 import string
 
-def generar_contrasena(length):
+def password_generator(length):
     #characters = string.ascii_letters + string.digits + string.punctuation # Added: "ñ", "Ñ", "ç" and "Ç".
     characters = "abcdefghijklmnñopqrstuvwxyzçABCDEFGHIJKLMNÑOPQRSTUVWXYZÇ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
     while True:
@@ -15,7 +15,7 @@ def main():
         try:
             length = int(input("Enter password length (must be longer than 12 characters): "))
             if length >= 12:
-                password = generar_contrasena(length)
+                password = password_generator(length)
                 print(password)
                 pyperclip.copy(password)  # Copy the password to the clipboard
                 print("The generated password has been copied to the clipboard.")
