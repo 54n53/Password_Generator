@@ -1,8 +1,5 @@
 import secrets # https://docs.python.org/3/library/secrets.htmls
 import pyperclip
-#import string
-
-
 
 def generar_contrasena(length):
     #characters = string.ascii_letters + string.digits + string.punctuation # Added: "ñ", "Ñ", "ç" and "Ç".
