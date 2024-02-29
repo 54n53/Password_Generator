@@ -1,6 +1,11 @@
 import secrets # https://docs.python.org/3/library/secrets.htmls
 import pyperclip
+<<<<<<< HEAD
+import getpass
+#import string
+=======
 import string
+>>>>>>> refs/remotes/origin/main
 
 def password_generator(length):
     #characters = string.ascii_letters + string.digits + string.punctuation # Added: "ñ", "Ñ", "ç" and "Ç".
@@ -13,10 +18,10 @@ def password_generator(length):
 def main():
     while True:
         try:
-            length = int(input("Enter password length (must be longer than 12 characters): "))
+            #length = int(input("Enter password length (must be longer than 12 characters): "))
+            length = int(getpass.getpass("Enter password length (must be longer than 12 characters): "))
             if length >= 12:
                 password = password_generator(length)
-                print(password)
                 pyperclip.copy(password)  # Copy the password to the clipboard
                 print("The generated password has been copied to the clipboard.")
                 break
